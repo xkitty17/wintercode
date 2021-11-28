@@ -23,7 +23,48 @@ type ExampleReply struct {
 }
 
 // Add your RPC definitions here.
+type MapNumArgs struct {
+}
+type MapNumReply struct {
+	Num int
+}
 
+type MapTaskArgs struct {
+	Content string
+}
+
+type MapTaskReply struct {
+	File     string
+	MapTaskID int
+}
+
+type MapTaskDoneArgs struct {
+	Content  string
+	FileName string
+}
+type MapTaskDoneReply struct {
+	Done bool
+}
+type ReduceArgs struct {
+	Content string
+}
+
+type ReduceReply struct {
+	ReduceTaskID int
+}
+
+type ReduceTaskDoneArgs struct {
+	TaskID int
+}
+type ReduceTaskDoneReply struct {
+}
+
+type MROverArgs struct {
+}
+
+type MROverReply struct {
+	Done bool
+}
 
 // Cook up a unique-ish UNIX-domain socket name
 // in /var/tmp, for the master.
